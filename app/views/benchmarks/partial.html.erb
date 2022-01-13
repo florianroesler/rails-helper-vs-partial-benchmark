@@ -1,2 +1,10 @@
-<%= render partial: 'benchmarks/partial/inner' %>
-
+<div style="display: flex;">
+  <div>
+    <% benchmarked_time = Benchmark.measure do %>
+      <%= render partial: 'benchmarks/partial/inner' %>
+    <% end %>
+  </div>
+  <div style="margin-left: 200px;">
+    <%= benchmarked_time %>
+  </div>
+</div>
