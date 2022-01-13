@@ -1,0 +1,20 @@
+<div style="display: flex;">
+  <div>
+    <% benchmarked_time = Benchmark.measure do %>
+      <% 20_000.times do %>
+        <% time = Time.current %>
+        <div class="test">
+          <div class="inner">
+            <%= time.nsec %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div style="margin-left: 200px;">
+    <%= benchmarked_time %>
+  </div>
+</div>
+
+
+

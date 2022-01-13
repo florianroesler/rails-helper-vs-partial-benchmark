@@ -1,0 +1,10 @@
+<div style="display: flex;">
+  <div>
+    <% benchmarked_time = Benchmark.measure do %>
+      <%= helper_benchmark %>
+    <% end %>
+  </div>
+  <div style="margin-left: 200px;">
+    <%= benchmarked_time %>
+  </div>
+</div>
