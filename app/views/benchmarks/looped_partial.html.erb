@@ -1,0 +1,5 @@
+<%= render 'benchmarks/shared/measure' do %>
+  <% 20_000.times do %>
+    <%= render partial: 'benchmarks/shared/inner' %>
+  <% end %>
+<% end %>

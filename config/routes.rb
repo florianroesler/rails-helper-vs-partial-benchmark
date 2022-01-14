@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resource :benchmarks, only: [] do
     collection do
       get 'helper'
-      get 'partial'
+      get 'looped_html'
+      get 'looped_partial'
+      get 'collection_partial'
     end
   end
 end

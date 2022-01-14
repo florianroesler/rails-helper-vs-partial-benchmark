@@ -1,0 +1,4 @@
+<% collection = Array.new(20_000) %>
+<%= render 'benchmarks/shared/measure' do %>
+  <%= render partial: 'benchmarks/shared/inner', collection: collection %>
+<% end %>
