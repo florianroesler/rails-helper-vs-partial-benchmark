@@ -1,10 +1,10 @@
 <div style="display: flex;">
   <div>
-    <% benchmarked_time = Benchmark.measure do %>
-      <%= yield %>
+    <% benchmarked_time = Benchmark.bmbm do |bm| %>
+      <%= bm.report('Render') { yield } %>
     <% end %>
   </div>
   <div style="margin-left: 200px;">
-    <%= benchmarked_time %>
+    <%= benchmarked_time.last.real %>
   </div>
 </div>

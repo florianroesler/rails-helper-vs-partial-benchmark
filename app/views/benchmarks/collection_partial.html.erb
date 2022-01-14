@@ -1,4 +1,4 @@
-<% collection = Array.new(20_000) %>
+<% collection = Array.new(ApplicationHelper::N_RUNS) %>
 <%= render 'benchmarks/shared/measure' do %>
   <%= render partial: 'benchmarks/shared/inner', collection: collection %>
 <% end %>

@@ -1,7 +1,9 @@
 module ApplicationHelper
+  N_RUNS = 100_000
+
   def helper_benchmark
     capture do
-      20_000.times do
+      N_RUNS.times do
         time = Time.current
         concat(
           tag.div(class: 'test') do

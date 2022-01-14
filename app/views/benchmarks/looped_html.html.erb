@@ -1,5 +1,5 @@
 <%= render 'benchmarks/shared/measure' do %>
-  <% 20_000.times do %>
+  <% ApplicationHelper::N_RUNS.times do %>
     <% time = Time.current %>
     <div class="test">
       <div class="inner">
