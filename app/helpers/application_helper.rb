@@ -13,4 +13,11 @@ module ApplicationHelper
       end
     end
   end
+
+  def helper_partial
+    time = Time.current
+    tag.div(class: 'test') do
+      concat tag.div(time.nsec, class: 'inner')
+    end
+  end
 end

@@ -1,0 +1,5 @@
+<%= render 'benchmarks/shared/measure' do %>
+  <% ApplicationHelper::N_RUNS.times do %>
+    <%= helper_partial %>
+  <% end %>
+<% end %>
